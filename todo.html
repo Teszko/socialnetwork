@@ -46,11 +46,12 @@
 
                 
          <div class="collapse navbar-collapse">
-                    
+                  
+                        
                 <ul class="nav navbar-nav">
                         
-                    <li><a href="todo.html">TODOs</a></li>
-                    <li ><a href="erstellen.html">Erstellen</a></li>
+                    <li class="active"><a href="todo.html">TODOs</a></li>
+                    <li><a href="erstellen.html">Erstellen</a></li>
                     <li><a href="editieren.html">Editieren</a></li>
                     <li><a href="impressum.html">Impressum</a></li>
 
@@ -66,12 +67,40 @@
     </div>
       
       
-    <div class="container">
-      <h1>Willkommen auf unserer TodoSeite </h1>
-    </div>
+      <div class="container">
       
+    
+     <table class="table table-striped table-bordered">
+      <tr>
+        <th>Task</th>
+        <th>Deadline</th>
+        <th>Progress</th>
+      </tr>
+      <tr>
+        <td>Beispielseite mit dem Bootstrap Framework anlegen</td>
+        <td>26. April 2015</td>
+        <td>10%</td>
+        <td> <button type="button" class="btn btn-default">Todo bearbeiten</button> </td>
+        <td><button type="button" class="btn btn-danger">Todo löschen</button></td> 
+      </tr>
+      <tr>
+        <td>Rücksprache organisieren</td>
+        <td>03. Mai 2017</td>
+        <td>50%</td>
+        <td> <button type="button" class="btn btn-default">Todo bearbeiten</button> </td>
+        <td><button type="button" class="btn btn-danger">Todo löschen</button></td> 
+      </tr>
+      <tr>
+        <td>Abgabe</td>
+        <td>07. Juni 2018</td>
+        <td>50%</td>
+        <td> <button type="button" class="btn btn-default">Todo bearbeiten</button> </td>
+        <td><button type="button" class="btn btn-danger">Todo löschen</button></td> 
+      </tr>
+    </table>
+          
       
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
