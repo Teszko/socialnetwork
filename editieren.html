@@ -68,11 +68,56 @@
       </div>
 
 
+        <div class="container">
+
+            <h1>Editieren</h1>
+
+            <form>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="comment"></label>
+                            <textarea class="form-control" rows="5" id="comment">Lorem Ipsum Dolor sit amet.</textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">50%</span>
+                                <input type="number" class="form-control" placeholder="Fortschritt" min="0" max="100">
+                            </div>
+                            <div class="input-group">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <input type="date" id="edit-date-picker" class="form-control" name="deadline">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button type="submit" class="btn btn-warning pull-right">Ändern</button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        var now = new Date();
+        var day = ("0" + now.getDate()).slice(-2);
+        var month = ("0" + (now.getMonth() + 1)).slice(-2);
+        var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+        $('#edit-date-picker').val(today);
+    </script>
   </body>
 </html>
