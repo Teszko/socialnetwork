@@ -87,20 +87,30 @@
       
       <h1>Add new Item</h1>
       <form>
-          <div class="form-group">
-            <label for="task">Task</label>
-            <input type="text" class="form-control" name"task">
-              
-            <label for="deadline">Deadline</label>
-            <input type="date" class="form-control" name="deadline">
-
-            <label for="progress">Progress</label>
-            <input type="text" class="form-control" name="progress">
-
-            </div>
-        </form>
-        <button type="button" class="btn btn-success btn-lg btn-block">Submit</button>
-
+          <div class="row">
+              <div class="col-md-12">
+                  <div class="form-group">
+                      <label for="comment"></label>
+                      <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="form-group">
+                      <div class="input-group">
+                          <span class="input-group-addon">%</span>
+                          <input type="number" class="form-control" placeholder="Fortschritt" min="0" max="100">
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4">
+                  <button type="submit" class="btn btn-success pull-right">Speichern</button>
+              </div>
+          </div>
+      </form>
           
           
       </div>
