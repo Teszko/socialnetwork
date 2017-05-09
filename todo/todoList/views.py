@@ -13,9 +13,9 @@ def index(request):
     return render(request, 'todoList/index.html', context)
 
 
-def detail(request, todo_id):
+def editieren(request, todo_id):
     todo = get_object_or_404(Todo, pk=todo_id)
-    return render(request, 'todoList/detail.html', {'todo': todo})
+    return render(request, 'todoList/editieren.html', {'todo': todo})
 
 
 def change(request, question_id):
