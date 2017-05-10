@@ -1,4 +1,6 @@
 from django.conf.urls import url
+from django.conf import settings
+from django.conf.urls.static import static
 
 from . import views
 
@@ -9,4 +11,4 @@ urlpatterns = [
                url(r'^(?P<todo_id>[0-9]+)/$', views.editieren, name='editieren'),
                url(r'^(?P<todo_id>[0-9]+)/change/$', views.change, name='change'),
                url(r'^(?P<todo_id>[0-9]+)/create/$', views.create, name='create'),
-               ]
+               ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

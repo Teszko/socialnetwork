@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -6,9 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Soziales Netz</title>
     <link rel="icon" href="favicon.ico" />
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link href="{% static "todoList/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "todoList/css/styles.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "todoList/font-awesome-4.7.0/css/font-awesome.min.css" %}">
 </head>
 <body>
     <div class="navbar navbar-default">
@@ -89,7 +91,7 @@
 
     </div>
 
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{% static "todoList/js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "todoList/js/bootstrap.min.js" %}"></script>
 </body>
 </html>
