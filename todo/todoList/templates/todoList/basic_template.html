@@ -1,0 +1,46 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Soziales Netz</title>
+    <link rel="icon" href="favicon.ico" />
+    <link href="{% static "todoList/css/bootstrap.min.css" %}" rel="stylesheet">
+    <link href="{% static "todoList/css/styles.css" %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static "todoList/font-awesome-4.7.0/css/font-awesome.min.css" %}">
+</head>
+<body>
+    <div class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="index.html" class="navbar-brand">Social Network</a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    {% block navbar_urls %}
+                    <li class="active"><a href="{% url 'todoList:index' %}">TODOs</a></li>
+                    <li><a href="{% url 'todoList:erstellen' %}">Erstellen</a></li>
+                    <li><a href="{% url 'todoList:editieren' '1' %}">Editieren</a></li>
+                    <li><a href="{% url 'todoList:impressum' %}">Impressum</a></li>
+                    {% endblock %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="{% static "todoList/js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "todoList/js/bootstrap.min.js" %}"></script>
+</body>
+</html>

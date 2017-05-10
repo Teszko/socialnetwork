@@ -18,10 +18,10 @@ def editieren(request, todo_id):
     return render(request, 'todoList/editieren.html', {'todo': todo})
 
 
-def change(request, question_id):
-    response = "You're about to change a TodoItem %s."
-    return HttpResponse(response % question_id)
+def erstellen(request):
+    return render(request, 'todoList/erstellen.html')
 
-def create(request, question_id):
-    return HttpResponse("You're creating a TodoItem %s." % todoId_id)
+
+def impressum(request):
+    return render(request, 'todoList/impressum.html')
 

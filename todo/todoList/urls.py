@@ -8,7 +8,7 @@ from . import views
 app_name = 'todoList'
 urlpatterns = [
                url(r'^$', views.index, name='index'),
-               url(r'^(?P<todo_id>[0-9]+)/$', views.editieren, name='editieren'),
-               url(r'^(?P<todo_id>[0-9]+)/change/$', views.change, name='change'),
-               url(r'^(?P<todo_id>[0-9]+)/create/$', views.create, name='create'),
+               url(r'^change/(?P<todo_id>[0-9]+)$', views.editieren, name='editieren'),
+               url(r'^create/$', views.erstellen, name='erstellen'),
+               url(r'^impressum/$', views.impressum, name='impressum'),
                ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
