@@ -1,0 +1,38 @@
+.content-box {
+    border: 1px solid rgb(221, 221, 221);
+    margin-bottom: 10px;
+}
+
+.button-discrete {
+    border: 0px;
+    background-color: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.content-box-header-text {
+    padding: 6px;
+    padding-left: 20px;
+}
+
+.content-box-header {
+    background-color: #f4f4f4;
+}
+
+.content-box-body {
+    border-top: 1px solid rgb(221, 221, 221);
+    padding: 20px 50px 20px 50px;
+}
+
+.progress-content-box {
+    background-color: transparent;
+    margin-bottom: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.row-margin-bottom-30 {
+    margin-bottom: 30px;
+}
