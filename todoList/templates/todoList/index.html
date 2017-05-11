@@ -28,7 +28,7 @@
                                 <li><a href="{% url 'todoList:editieren' todo.id %}"><i class="fa fa-pencil fa-fw"></i> Ändern</a></li>
 
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#"><i class="fa fa-trash-o fa-fw" aria-hidden="true"></i> Löschen</a></li>
+                                <li><a href="{% url 'todoList:delete' todo.id %}"><i class="fa fa-trash-o fa-fw" aria-hidden="true"></i> Löschen</a></li>
                             </ul>
                         </div>
                     </div>

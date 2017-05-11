@@ -10,12 +10,13 @@
 {% if todo %}
 <div class="container">
     <h1>Eintrag ändern</h1>
-    <form>
+    <form action="{% url 'todoList:save' todo.pk %}" method="post">
+        {% csrf_token %}
         <div class="row">
             <div class="col-sm-12">
                 <div class="form-group">
                     <label for="comment"></label>
-                    <textarea class="form-control" rows="5" id="comment">{{ todo.todo_text }}</textarea>
+                    <textarea class="form-control" rows="5" name="todo_text" id="comment">{{ todo.todo_text }}</textarea>
                 </div>
             </div>
         </div>
@@ -24,7 +25,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-percent" aria-hidden="true"></i></span>
-                        <input id="progress-input" type="number" class="form-control" placeholder="Fortschritt" min="0" max="100" value="{{ todo.percentage }}">
+                        <input id="progress-input" type="number" name="percentage" class="form-control" placeholder="Fortschritt" min="0" max="100" value="{{ todo.percentage }}">
                     </div>
                     <div class="input-group">
                     </div>
@@ -32,7 +33,7 @@
             </div>
             <div class="col-sm-4">
                 <div class="form-group">
-                    <input type="date" id="edit-date-picker" class="form-control" name="deadline">
+                    <input type="date" id="edit-date-picker" class="form-control" name="deadline_date">
                 </div>
             </div>
             <div class="col-sm-4">

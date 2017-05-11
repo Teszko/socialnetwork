@@ -12,4 +12,6 @@ urlpatterns = [
                url(r'^create/$', views.erstellen, name='erstellen'),
                url(r'^impressum/$', views.impressum, name='impressum'),
                url(r'^save/$', views.save, name='save'),
+               url(r'^save/(?P<todo_id>[0-9]+)$', views.save, name='save'),
+               url(r'^delete/(?P<todo_id>[0-9]+)$', views.delete, name='delete'),
                ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
