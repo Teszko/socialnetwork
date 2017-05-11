@@ -11,4 +11,5 @@ urlpatterns = [
                url(r'^change/(?P<todo_id>[0-9]+)$', views.editieren, name='editieren'),
                url(r'^create/$', views.erstellen, name='erstellen'),
                url(r'^impressum/$', views.impressum, name='impressum'),
+               url(r'^save/$', views.save, name='save'),
                ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

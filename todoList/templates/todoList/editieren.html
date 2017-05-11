@@ -3,7 +3,6 @@
 {% block navbar_urls %}
 <li><a href="{% url 'todoList:index' %}">TODOs</a></li>
 <li><a href="{% url 'todoList:erstellen' %}">Erstellen</a></li>
-<li class="active"><a href="{% url 'todoList:editieren' '1' %}">Editieren</a></li>
 <li><a href="{% url 'todoList:impressum' %}">Impressum</a></li>
 {% endblock %}
 
@@ -25,7 +24,7 @@
                 <div class="form-group">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-percent" aria-hidden="true"></i></span>
-                        <input id="progress-input" type="number" class="form-control" placeholder="Fortschritt" min="0" max="100">
+                        <input id="progress-input" type="number" class="form-control" placeholder="Fortschritt" min="0" max="100" value="{{ todo.percentage }}">
                     </div>
                     <div class="input-group">
                     </div>
@@ -44,13 +43,11 @@
 </div>
 {% else %}
 <div>There is no such element</div>
-
-
-<script src="js/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script>
-    $('#edit-date-picker').val({{todo.deadline_date}});
-    $('#progress-input').val({{todo.percentage}});
-</script>
 {% endif %}
+{% endblock %}
+
+{% block js %}
+<script>
+    $('#edit-date-picker').val('{{todo.deadline_date}}');
+</script>
 {% endblock %}

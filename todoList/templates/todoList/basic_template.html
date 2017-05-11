@@ -29,7 +29,6 @@
                     {% block navbar_urls %}
                     <li class="active"><a href="{% url 'todoList:index' %}">TODOs</a></li>
                     <li><a href="{% url 'todoList:erstellen' %}">Erstellen</a></li>
-                    <li><a href="{% url 'todoList:editieren' '1' %}">Editieren</a></li>
                     <li><a href="{% url 'todoList:impressum' %}">Impressum</a></li>
                     {% endblock %}
                 </ul>
@@ -42,5 +41,7 @@
 
     <script src="{% static "todoList/js/jquery-3.2.1.min.js" %}"></script>
     <script src="{% static "todoList/js/bootstrap.min.js" %}"></script>
+    {% block js %}
+    {% endblock %}
 </body>
 </html>
